@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Lentus - Responsive Flexbox Grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lentus.min.css">
+  </head>
+
+  <body>
+	<div class="sticky row">
+		<div class="col-12">
+			<h2>Lentus - Responsive Flexbox Grid</h2>
+			<h3>A project by <a href="http://guuslieben.nl/">Guus Lieben</a></h3>
+		</div>
+	</div>
+
+	<div class="blank-col"></div>
+
+    <div class="row">
+    	<div style="margin-top: -20px;" class="col-12">
+    		<a href="http://lentus.guuslieben.nl/lentus.default.zip" download class="button">Download Default</a>
+    		<a href="http://lentus.guuslieben.nl/lentus.min.zip" download class="button">Download Minified</a>
+    		<a href="http://lentus.guuslieben.nl/lentus.pack.zip" download class="button">Download Pack</a>
+    	</div>
+	</div>
+
+	<div id="htu" class="wrapper">
+		<div class="row">
+			<div class="col-12 text-left">
+				<h2 class="text-center">USAGE</h2>
+				<hr>
+				<p>Load up <i class="file">grid.css</i> or <i class="file">grid.min.css</i><br><br> Afterwards you can add your own custom css files.</p>
+				
+				<div class="codiv">
+<i class="selector"> &lt;link </i><i class="key">rel</i>=<i class="value">"stylesheet"</i> <i class="key">href</i>=<i class="value">"css/grid.css"</i><i class="selector">&gt;</i><br>
+<i class="selector"> &lt;link </i><i class="key">rel</i>=<i class="value">"stylesheet"</i> <i class="key">href</i>=<i class="value">"css/grid.min.css"</i><i class="selector">&gt;</i></div>
+				
+				<p>Then add a <i class="selector">&lt;div&gt;</i> box and add class <i class="value">"row"</i>. Now add, within the row you created, another <i class="selector">&lt;div&gt;</i> with a class like <i class="value">"col-<b>12</b>"</i> (see Column Classes below). What we've just done is; (1) Create a box for our columns to be placed in. (2) Created a column that uses the full width of the row.</p>
+
+				<div class="codiv">
+					<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"row"</i><i class="selector">&gt;</i><br>
+
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-12"</i><i class="selector">&gt; &lt;/div&gt;</i><br>
+
+<i class="selector"> &lt;/div&gt;</i></div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-12 text-left">
+				<h2 class="text-center">Default Layout</h2>
+				<hr>
+				<h3>Flex Columns</h3>
+				<p>There are a few rules you need to stick to in order to make this work, don't worry though, it's pretty simple</p>
+
+				<p>As explained above, you always start by creating a row and within that you add your columns. To add columns you simply add <i class="value">"col-<b>var</b>"</i> where <b>var</b> is a number between 1 and 12. If you create a column with a <b>var</b> lower than 12, make sure to create another column next to it, to get the right width you need to make sure that the <b>var</b> of both columns together are a sum of 12. Let's turn that into a piece of code shall we?</p>
+
+				<div class="codiv">
+					<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"row"</i><i class="selector">&gt;</i><br>
+
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-5"</i><i class="selector">&gt;</i> col-5 <i class="selector">&lt;/div&gt;</i> <i class="comment">&lt;!-- We created a column with var 5. 12 - 5 = 7, So our second column will have var as 7 --&gt; </i><br>
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-7"</i><i class="selector">&gt;</i> col-7 <i class="selector">&lt;/div&gt;</i><br>
+<i class="selector"> &lt;/div&gt;</i></div>
+
+				<p>This will output the following :</p>
+
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-5">col-5</div>
+						<div class="col-7">col-7</div>
+					</div>
+				</div>		
+				<br>
+				<p>If you want to place more than just two columns next to each other, just add another <i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-var"</i><i class="selector">&gt; &lt;/div&gt;</i>.</p>
+				<div class="codiv">
+					<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"row"</i><i class="selector">&gt;</i><br>
+
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-4"</i><i class="selector">&gt;</i> col-4 <i class="selector">&lt;/div&gt;</i> <i class="comment">&lt;!-- We created a column with var 4. 12 - 4 = 8, So our second and third column will have var as 8/2 (4) --&gt; </i><br>
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-4"</i><i class="selector">&gt;</i> col-4 <i class="selector">&lt;/div&gt;</i><br>
+  &nbsp;&nbsp;<i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"col-4"</i><i class="selector">&gt;</i> col-4 <i class="selector">&lt;/div&gt;</i><br>
+<i class="selector"> &lt;/div&gt;</i></div>
+				<p>The result:</p>
+				<div class="wrapper">
+					<div class="row">
+						<div class="col-4">col-4</div>
+						<div class="col-4">col-4</div>
+						<div class="col-4">col-4</div>
+					</div>
+				</div>		
+				<h3>Wrapping</h3>
+				<p>To make the columns & rows look better on desktop computers, there is also a wrapper included in the source code. To add it just place the columns and rows within <i class="selector"> &lt;div </i><i class="key">class</i>=<i class="value">"wrapper"</i><i class="selector">&gt; &lt;/div&gt;</i>. This will set the max-width of the rows and columns to 1200px, this can easily be changed to fit your needs.</p>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-12 text-left">	
+				<h2 class="text-center">Column Classes</h2>
+				<hr>
+				<p>There are 12 types of columns. These are all very much alike, but just so you get to know all options they're displayed below.</p>
+				<br>
+				<div class="row">
+					<div class="col-6">
+						<table>
+ 							<tr>
+    							<th>Class</th>
+    							<th>Width (%) </th>
+  							</tr>
+  							<tr>
+    							<td data-th="Class" class="value">.col-1</td>
+   								<td data-th="Width" class="comment">8⅓ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-2</td>
+   								<td data-th="Width" class="comment">16⅔ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-3</td>
+   								<td data-th="Width" class="comment">25%</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-4</td>
+   								<td data-th="Width" class="comment">33⅓ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-5</td>
+   								<td data-th="Width" class="comment">41⅔ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-6</td>
+   								<td data-th="Width" class="comment">50%</td>
+ 							</tr>
+ 						</table>
+ 					</div>
+ 					<div class="col-6">
+ 						<table>
+ 							<tr>
+    							<th>Class</th>
+    							<th>Width (%) </th>
+  							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-7</td>
+   								<td data-th="Width" class="comment">58⅓ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-8</td>
+   								<td data-th="Width" class="comment">66⅔ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-9</td>
+   								<td data-th="Width" class="comment">75%</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-10</td>
+   								<td data-th="Width" class="comment">83⅓ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-11</td>
+   								<td data-th="Width" class="comment">91⅔ %</td>
+ 							</tr>
+ 							<tr>
+    							<td data-th="Class" class="value">.col-12</td>
+   								<td data-th="Width" class="comment">100%</td>
+ 							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-12 text-left">	
+				<h2 class="text-center">Function Classes</h2>
+				<hr>
+				<p>There are 5 classes that add some functionality to your columns or wrappers. These take care of styling, but are mainly for the more obvious parts in your website.</p>
+				<table class="rwd-table">
+ 					<tr>
+    					<th>Class</th>
+    					<th>Function</th>
+    					<th>Description</th>
+  					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.blank-col</td>
+   						<td data-th="Type" class="comment">Height Styling</td>
+    					<td data-th="Description">Adds a 150px high empty space. Useful to see what something looks like before adding text.</td>
+ 					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.sticky</td>
+    					<td data-th="Type" class="comment">Sticky Header</td>
+    					<td data-th="Description">Sticks a column to the top, useful for headers, like the one used on this page.</td>
+ 					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.no-back</td>
+    					<td data-th="Type" class="comment">Background Coloring</td>
+    					<td data-th="Description">'removes' the background of a wrapper, making it look better. Useful in combination with .hidden-col.</td>
+  					</tr>
+  					<tr>
+					    <td data-th="Class" class="value">.hidden-col</td>
+					    <td data-th="Type" class="comment">Column Alignment</td>
+					    <td data-th="Description">Makes a column invisible, useful to align other columns in the same row to a certain side.</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.no-mobile</td>
+					    <td data-th="Type" class="comment">Cross-device reaction</td>
+					    <td data-th="Description">Hides the column if the width of the screen <= 500px. Use in combination with the viewport tag!</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-12 text-left">	
+				<h2 class="text-center">Style Classes</h2>
+				<hr>
+				<p>There are 14 classes that add basic styling to your columns or wrappers. These mainly take care of easy styling, but are mainly to give you some ideas on what is possible.</p>
+				<table class="rwd-table">
+ 					<tr>
+    					<th>Class</th>
+    					<th>Function</th>
+    					<th>Description</th>
+  					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.warn</td>
+   						<td data-th="Type" class="comment">Column Color Styling</td>
+    					<td data-th="Description">Changes the background of a column to #FFDB4D (yellow)</td>
+ 					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.note</td>
+    					<td data-th="Type" class="comment">Column Color Styling</td>
+    					<td data-th="Description">Changes the background of a column to #5CADFF (blue)</td>
+ 					</tr>
+  					<tr>
+    					<td data-th="Class" class="value">.error</td>
+    					<td data-th="Type" class="comment">Column Color Styling</td>
+    					<td data-th="Description">Changes the background of a column to #FF5353 (red)</td>
+  					</tr>
+  					<tr>
+					    <td data-th="Class" class="value">.correct</td>
+					    <td data-th="Type" class="comment">Column Color Styling</td>
+					    <td data-th="Description">Changes the background of a column to #33D685 (green)</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.rounded</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds all corners of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.top-r</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the top right corner of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.top-l</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the top left corner of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.bottom-r</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the bottom right corner of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.bottom-l</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the bottom left corner of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.rad-r</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the right corners of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.rad-l</td>
+					    <td data-th="Type" class="comment">Column Border Decoration</td>
+					    <td data-th="Description">Rounds the left corners of a column 100px</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.text-left</td>
+					    <td data-th="Type" class="comment">Text Alignment</td>
+					    <td data-th="Description">Aligns text within a wrapper, row or column to the left</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.text-right</td>
+					    <td data-th="Type" class="comment">Text Alignment</td>
+					    <td data-th="Description">Aligns text within a wrapper, row or column to the right</td>
+					</tr>
+					<tr>
+					    <td data-th="Class" class="value">.center</td>
+					    <td data-th="Type" class="comment">Text Alignment</td>
+					    <td data-th="Description">Centers text within a wrapper, row or column</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<p style="margin-bottom: 20px;" class="text-center">&copy; 2015 Guus Lieben - Lentus</p>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Some basic styling to display the grid in a pretty way */
+html, body {
+  height: 100%;
+  background: #f1f1f1;
+  color: #333;
+  font-family: 'Roboto', serif; 
+}
+
+.wrapper {margin: 20px auto;}
+
+[class*="col-"] {
+  margin-bottom: 20px;
+  min-height: 30px;
+  background: #fff;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+@media all and (min-width: 500px) {
+  .wrapper {
+    padding: 0 20px;
+   background-color: #e1e1e1;
+   padding-top: 20px;
+   border-radius: 5px;
+  }
+
+  .row {display: flex;}
+
+  [class*="col-"] {margin-right: 20px;}
+
+  [class*="col-"]:last-child {margin-right: 0;}
+
+  .col-1 {flex: 1;}
+  .col-2 {flex: 2;}
+  .col-3 {flex: 3;}
+  .col-4 {flex: 4;}
+  .col-5 {flex: 5;}
+  .col-6 {flex: 6;}
+  .col-7 {flex: 7;}
+  .col-8 {flex: 8;}
+  .col-9 {flex: 9;}
+  .col-10 {flex: 10;}
+  .col-11 {flex: 11;}
+  .col-12 {flex: 12;}
+}
+
+@media all and (min-width: 1000px) {.wrapper {max-width: 1200px;}}
+
+
+/* 
+ Some extra styling, not required, but it can always be useful for creating custom elements
+ */
+
+/* height div, creating some empty space */
+.blank-col {min-height: 150px; max-height: 150px;}
+
+/* useful for headers, make it stick to the top */
+.sticky {
+  font-family: 'Roboto', serif; 
+  top: 0;
+  position:fixed;
+  width: 100%;
+  max-height: 150px;
+}
+
+/* 'invisible' background */
+.no-back {background-color: #f1f1f1; /* make sure to change this to the background color */}
+
+/* column colors, cool stuff for notifications or such */
+.warn {background: #FFDB4D;}
+.note {background: #5CADFF; color: #fff;}
+.error {background: #FF5353; color: #fff;}
+.correct {background: #33D685; color: #fff;}
+
+/* rounded column styles */
+.rounded {border-radius: 100px;} /* all sides */
+.top-r {border-top-right-radius: 100px;} /* top-right */
+.top-l {border-top-left-radius: 100px;} /* top-left */
+.bottom-r {border-bottom-right-radius: 100px;} /* bottom-right */
+.bottom-l {border-bottom-left-radius: 100px;} /* bottom-left */
+
+.rad-l {border-radius: 100px 0 0 100px;} /* left side */
+.rad-r {border-radius: 0 100px 100px 0;} /* right side */
+
+/* invisible column, used to align other columns to a certain place, for example adding 'col-6' & 'col-6 hidden-col' will hide the second one, pushing the first one to the left */
+.hidden-col {visibility: hidden;}
+
+/* align text within columns, rows or wrappers without changing the overall styling */
+.text-left {text-align: left;}
+.text-right {text-align: right;}
+.text-center {text-align: center;}
+
+/* hide a column, row or a wrapper on mobile devices */
+@media all and (max-width: 500px){
+  .no-mobile {display: none;}
+}

@@ -1,0 +1,93 @@
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:600");
+h2 {
+  font: 600 20px/1 'Open Sans', sans-serif;
+  color: #888;
+  margin: 20px 0;
+}
+
+h3 {
+	font: 600 15px/1 'Open Sans', sans-serif;
+	color: #999;
+	margin: 20px 0;
+}
+
+p {
+  color: #777;
+}
+
+a {
+	color: #333;
+	text-decoration: underline;
+}
+
+.codiv {
+	padding: 10px;
+	background: #F7F7F7;
+  	color: #a6c3d4;
+	margin: 20px 0;
+	font-size: 14px;
+	border-radius: 10px;
+}
+
+.comment       { color: #586368; }
+.selector      { color: #D83E77; }
+.key           { color: #61AAD3; }
+.value         { color: #D1713A; }
+
+.file {
+	padding: 5px 10px;
+	font-style: italic;
+	background: #F7F7F7;
+  	color: #333;
+  	font-style: normal;
+	border-radius: 4px;
+}
+
+hr {
+  height:2px; 
+  border:none; 
+  background-color:#d3d3d3;
+  width:100px; 
+  text-align:center; 
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+
+table {
+	max-width: 90%; min-width: 90%;
+	margin: 20px auto;
+}
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; }
+th:first-child,
+td:first-child {
+  padding-left: 0; }
+th:last-child,
+td:last-child {
+  padding-right: 0; }
+
+ .button {
+  display: inline-block;
+  height: 38px;
+  padding: 0 30px;
+  margin: 0 5px;
+  color: #555;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  min-width: 200px;
+  max-width: 200px;
+ }
