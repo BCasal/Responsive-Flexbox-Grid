@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Lentus · Responsive Flexbox Grid (Demo)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/lentus.min.css">
+  </head>
+
+ 	<body>
+
+	    <!-- Yep, a column without the wrapper will look like this. Pretty isn't it? -->
+		<div class="sticky row">
+			<div class="col-12">
+				<h2>Responsive Flexbox Grid Examples/Playground</h2>
+				<h3>A project by <a href="http://guuslieben.nl/">Guus Lieben</a>.</h3>
+			</div>
+		</div>
+
+		<div class="blank-col"></div> <!-- add some space below, make sure it doesn't overlap -->
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-2"><p>Col-2</p></div>
+				<div class="col-2"><p>Col-2</p></div>
+				<div class="col-2"><p>Col-2</p></div>
+				<div class="col-2"><p>Col-2</p></div>
+				<div class="col-2"><p>Col-2</p></div>
+				<div class="col-2"><p>Col-2</p></div>
+			</div>
+			<div class="row">
+				<div class="col-1"><p>Col-1</p></div>
+				<div class="col-1"><p>Col-1</p></div>
+				<div class="col-1"><p>Col-1</p></div>
+				<div class="col-1"><p>Col-1</p></div>
+				<div class="col-1"><p>Col-1</p></div>
+			</div>
+			<div class="row">
+				<div class="col-3"><p>Col-3</p></div>
+				<div class="col-3"><p>Col-3</p></div>
+				<div class="col-3"><p>Col-3</p></div>
+				<div class="col-3"><p>Col-3</p></div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-12"><p>As you can see on the second row in the first wrapper, it is possible to add working columns which don't have the sum of 12. As long as they're the same size it will work perfectly fine.</p><br>
+					<p>Also, the wrappers have some spacing in between to make sure it looks great when placed below each other. I rounded the borders to make it look more fluent.</p></div>
+			</div>
+		</div>
+
+		<!-- You can also add multiple columns like this, good for full-width pages. -->
+		<div class="row">
+			<div class="col-6"><p>This row is outside of a wrapper, great if you want full-width pages. Or.. whatever you want to do with it, it's up to you!</p></div>
+			<div class="col-6 warn"><i class="fa fa-exclamation-triangle"></i> You can add notifications as well, let's make it a warning.</div>
+		</div>
+
+		<div class="wrapper no-mobile">
+			<div class="row">
+				<div class="col-12"><p>This wrapper is only visible on desktop computers and will be hidden on mobile devices (up to 500px {note the viewport tag} )</p></div>
+			</div>
+		</div>
+
+			<div class="wrapper no-back">
+				<div class="row">
+					<div class="col-8"><p>This wrapper has no background color, well, it kinda does, but it's the same as the default background so you don't see it.</p></div>
+					<div class="col-4"><p>You can use it on rows and columns, but it won't look very good.</p></div>
+				</div>
+			</div>
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-12"><p>Let's add some color! Good idea for buttons maybe?</p></div>
+			</div>
+			<div class="row">
+				<div class="col-3 warn">Warning</div>
+				<div class="col-3 note">Note</div>
+				<div class="col-3 error">Error</div>
+				<div class="col-3 correct">Correct</div>
+			</div>
+		</div>
+			
+			<div class="row">
+				<div class="col-12 error">
+					<i class="fa fa-exclamation-triangle"></i> Full width Error notification?
+				</div>
+			</div>
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-6 rounded"><p>Want a fully rounded column somewhere? No problem!</p></div>
+				<div class="col-2 rounded"><p>It's simple!</p></div>
+				<div class="col-4 rounded"><p>Just add class 'rounded'.</p></div> 
+			</div>
+			<div class="row">
+				<div class="col-12"><p>You can also add rounded corners, these can be placed in corners in non-wrapper columns. Ofcourse you can also just use them anywhere else.</p></div>
+			</div>
+			<div class="row">
+				<div class="col-3 top-r"><p>top-r</p></div>
+				<div class="col-3 top-l"><p>top-l</p></div>
+				<div class="col-3 bottom-r"><p>bottom-r</p></div>
+				<div class="col-3 bottom-l"><p>bottom-l</p></div>
+			</div>
+			<div class="row">
+				<div class="col-12"><p>You can also round just the left or right.</p></div>
+			</div>
+		<div class="row">
+				<div class="col-6 rad-r"><p>rad-r</p></div>
+				<div class="col-6 rad-l"><p>rad-l</p></div>
+			</div>
+		</div>
+
+		<div class="wrapper no-back">
+			<div class="row">
+				<div class="col-6 hidden-col"></div>
+				<div class="col-6"><p>This column will align right, because there is a hidden column on its left. I added the 'no-back' class to make it look nicer.</p></div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-9 warn"><i class="fa fa-exclamation-circle"></i> Warning? This one is aligned to the left!</div>
+			<div class="col-3 hidden-col"></div>
+		</div>
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-4 text-left"><p>This text is aligned left</p></div>
+				<div class="col-4"><p>This text is centered</p></div>
+				<div class="col-4 text-right"><p>This text is aligned right</p></div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-2 full-width correct">These columns don't have horizontal space between them</div>
+			<div class="col-2 full-width warn">Useful if you want to create stuff that will take up the entire page</div>
+		</div>
+
+		<div class="row">
+		   <div class="col-3 full-width space-off correct"><p>By adding both the full-width and the space-off classes..</p></div>
+		   <div class="col-3 full-width space-off warn"><p>You can do some pretty epic stuff!</p></div>
+		 </div>
+		 <div class="row">
+		   <div class="col-3 full-width error"><p>By removing the wrapper like I did here..</p></div>
+		   <div class="col-3 full-width note"><p>You can really make good use of the entire page</p></div>
+		 </div>
+
+		<div class="wrapper">
+			<div class="row">
+				<div class="col-2 full-width correct">These columns don't have horizontal space between them</div>
+				<div class="col-2 full-width warn">Useful if you want to create stuff that will take up the entire page</div>
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<div class="row">
+		   <div class="col-3 full-width space-off correct"><p>By adding both the full-width and the space-off classes..</p></div>
+		   <div class="col-3 full-width space-off warn"><p>You can really make good use of the entire page</p></div>
+		 </div>
+		 <div class="row">
+		   <div class="col-3 full-width error"><p>These columns don't have horizontal space between them</p></div>
+		   <div class="col-3 full-width note"><p>Useful if you want to create stuff that will take up the entire page</p></div>
+		 </div>
+		</div>
+
+		<div class="row">
+			<div class="back-img col-12">
+				<h2>Background Image</h2>
+				This is some text within a normal column, the difference? This one has an image as background instead of a solid color.
+			</div>
+		</div>
+	</body>
+</html>
