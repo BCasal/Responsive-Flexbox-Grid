@@ -24,6 +24,15 @@ html, body {
   padding: 20px;
 }
 
+.full-width { margin-bottom: 0; }
+
+.full-width:last-child { margin-bottom: 20px; }
+
+.space-off,
+.space-off:last-child {
+  margin-bottom: 0;
+}
+
 @media all and (min-width: 500px) {
   .wrapper {
     padding: 0 20px;
@@ -50,6 +59,16 @@ html, body {
   .col-10 {flex: 10;}
   .col-11 {flex: 11;}
   .col-12 {flex: 12;}
+
+  .full-width {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .space-off,
+  .space-off:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media all and (min-width: 1000px) {.wrapper {max-width: 1200px;}}
